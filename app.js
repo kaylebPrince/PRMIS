@@ -33,16 +33,6 @@ const bloodBankRouter = require('./Routes/userRoutes/bloodBank.route'); // 10
 
 const secureRoute = require('./Routes/authRoutes/auth.route');
 
-const requestListener = function (req, res) {
-    //Configure CORS
-    console.log(req.headers.origin)
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-
-    res.writeHead(200); // Status code 200 = OK
-    res.write(JSON.stringify({ message: "Hello There" }));
-    res.end();
-};
-
 const app = express();
 
 connectToDB();
